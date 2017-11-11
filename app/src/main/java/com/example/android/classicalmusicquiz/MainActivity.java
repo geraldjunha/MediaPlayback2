@@ -23,8 +23,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-
     private static final String GAME_FINISHED = "game_finished";
 
 
@@ -48,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
             TextView gameFinishedTextView = (TextView) findViewById(R.id.gameResult);
             TextView yourScoreTextView = (TextView) findViewById(R.id.resultScore);
 
+            
             Integer yourScore = QuizUtils.getCurrentScore(this);
             String yourScoreText = getString(R.string.score_result, yourScore, maxScore);
             yourScoreTextView.setText(yourScoreText);
 
             gameFinishedTextView.setVisibility(View.VISIBLE);
             yourScoreTextView.setVisibility(View.VISIBLE);
+            
         }
     }
 
